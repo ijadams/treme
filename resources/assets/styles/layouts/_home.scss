@@ -1,0 +1,45 @@
+body.home {
+  overflow: hidden;
+  height: 100%;
+}
+
+.fullscreen-image-slider {
+  ul.orbit-container {
+    max-height: 100vh;
+    button.orbit-next {
+      opacity: 0;
+
+      &.active,
+      &:hover {
+        background: white;
+        color: black;
+        opacity: 1;
+      }
+    }
+    button.obit-previous {
+      opacity: 0;
+
+      &.active,
+      &:hover {
+        background: white;
+        color: black;
+        opacity: 1;
+      }
+    }
+  }
+
+  .orbit-image {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .orbit-caption {
+    bottom: 50%;
+    transform: translateY(50%);
+    background: none;
+    text-align: center;
+    color: $white;
+    font-weight: bold;
+  }
+
+}

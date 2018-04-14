@@ -8,7 +8,7 @@
       "./scripts/customizer.js"
     ]
   },
-  "publicPath": "/wp-content/themes/treme-hideaway",
+  "publicPath": "/wordpress/wp-content/themes/treme",
   "devUrl": "http://localhost:8888/wordpress",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",

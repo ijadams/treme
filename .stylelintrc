@@ -1,0 +1,7 @@
+{
+  "rules": {
+    "no-eol-whitespace": [true, {
+      "ignore": ["empty-lines"]
+    }]
+  }
+}

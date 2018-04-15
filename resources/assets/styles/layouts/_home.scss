@@ -1,36 +1,32 @@
 body.home {
   overflow: hidden;
   height: 100%;
+  width: 100%;
+  cursor: pointer;
+  button.obit-previous, button.orbit-next {
+    transition: 0.2s ease-in-out;
+    &:hover {
+      background: white !important;
+      color: black !important;
+      cursor: pointer !important;
+    }
+  }
 }
 
 .fullscreen-image-slider {
   ul.orbit-container {
-    max-height: 100vh;
-    button.orbit-next {
-      opacity: 0;
-
-      &.active,
-      &:hover {
-        background: white;
-        color: black;
-        opacity: 1;
-      }
-    }
-    button.obit-previous {
-      opacity: 0;
-
-      &.active,
-      &:hover {
-        background: white;
-        color: black;
-        opacity: 1;
-      }
+    height: 100vh !important;
+    li {
+      height: 100%;
     }
   }
 
   .orbit-image {
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   .orbit-caption {

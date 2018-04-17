@@ -41,18 +41,20 @@ header.banner {
       justify-content: center;
     }
     ul li a {
-      padding: 0 2rem;
       color: white;
       font-weight: 500;
       letter-spacing: 1px;
-      font-size: 1.3146rem;
+      font-size: 1.1146rem;
       opacity: 0.8;
+      transition: 0.4s ease-in-out;
+      border-bottom: 1px solid transparent;
+      text-align: center;
+      margin: 0 0.4rem;
+      padding: 0.7rem;
       &:hover {
         font-weight: 700;
         opacity: 1;
-      }
-      &:last-of-type {
-        padding-right: 0;
+        border-bottom: 1px solid white;
       }
     }
   }
@@ -250,7 +252,9 @@ header.mobile {
 
     .menu__list a {
       font-size: 24px;
-      letter-spacing: 1px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
       color: white;
       padding: 1.4rem 1rem;
       &:hover {

@@ -1,25 +1,9 @@
-<div class="collection-detail-wrapper">
-  <div class="orbit" role="region" aria-label="FullScreen Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
-    <ul class="orbit-container">
-      <button class="orbit-previous">
-        <span class="show-for-sr">Previous Slide</span>
-        <span class="nav fa fa-chevron-left fa-2x"></span>
-      </button>
-      <button class="orbit-next">
-        <span class="show-for-sr">Next Slide</span>
-        <span class="nav fa fa-chevron-right fa-2x"></span>
-      </button>
-      <li class="is-active orbit-slide">
-        <div class="orbit-image" style="background-image: url(@asset('images/home-slide-1.jpg'))"></div>
-        <!--        <figcaption class="orbit-caption">-->
-        <!--          <h1>Treme Hideaway, New Orleans.</h1>-->
-        <!--        </figcaption>-->
-      </li>
-      <li class="orbit-slide">
-        <div class="orbit-image" style="background-image: url(@asset('images/home-slide-2.jpg'))"></div>
-      </li>
-    </ul>
-  </div>
+<div class="home-detail-wrapper">
+  <span class="address">
+    1234 N Claiborne Ave     <a href="tel:(504)301-4441"><i class="fa fa-phone-square" aria-hidden="true"></i></a><br>
+  </span>
+  <span class="hours">
+        Thursday - Sunday &middot; 5pm - 2am
+  </span>
 </div>
-
 

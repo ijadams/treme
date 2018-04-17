@@ -56,12 +56,24 @@ header.banner {
       }
     }
   }
+  @include tablet {
+    height: auto;
+    padding: 1rem;
+    img {
+      max-width: 200px;
+    }
+  }
+  @include mobile {
+    img {
+      max-width: 100px;
+    }
+  }
 }
 
 header.mobile {
   display: none;
   position: fixed;
-  z-index: 5;
+  z-index: 11;
   width: 100%;
 
   .burger {
@@ -78,6 +90,9 @@ header.mobile {
       height: 2px;
       margin: 0 0 4px 0;
       background: white;
+      &:hover {
+        cursor: pointer;
+      }
       @include easeOut;
 
       &:last-child {
@@ -88,7 +103,6 @@ header.mobile {
     // transform burger into 'x'
     &--close {
       transform: rotate(180deg);
-
       .burger__patty {
         &:nth-child(1) {
           transform: rotate(45deg) translate(4px, 4px);
@@ -128,7 +142,7 @@ header.mobile {
     &__list {
       margin: 0;
       padding: 0;
-      background: mix(black, $primary-color, 20);
+      background: mix(black, #2d3436, 20);
       list-style-type: none;
       transform: translate3d(0, -100%, 0);
       @include easeOut;
@@ -139,7 +153,7 @@ header.mobile {
     }
 
     &__brand {
-      background: $primary-color;
+      background: #2d3436;
       @include easeOut;
       transform: translate3d(0, 100%, 0);
 
@@ -149,7 +163,6 @@ header.mobile {
     }
 
     &__item {
-      transform: translate3d(500px, 0, 0);
       @include easeOut;
 
       &--active {
@@ -189,14 +202,29 @@ header.mobile {
 
     // add delay to each menu item
     @for $x from 1 through 6 {
-      .menu__item:nth-child(#{$x}) {
+      ul.menu__list li:nth-child(#{$x}) {
         transition-delay: $x * .1s;
+      }
+    }
+    .menu__social {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      ul {
+        padding: 0;
+        margin: 0 auto;
+      }
+      ul li {
+        display: inline-block;
+        margin: 0 0.4rem;
       }
     }
   }
 
   // responsive tablet view
   @include tablet {
+    display: block;
     ul.menu__list,
     div.menu__brand {
       float: none;
@@ -211,10 +239,23 @@ header.mobile {
     .menu__list {
       height: 75vh;
       transform: translate3d(-100%, 0, 0);
+      ul {
+        margin: 0 auto;
+      }
+      ul li {
+        list-style: none;
+        text-align: center;
+      }
     }
 
-    .menu__link {
+    .menu__list a {
       font-size: 24px;
+      letter-spacing: 1px;
+      color: white;
+      padding: 1.4rem 1rem;
+      &:hover {
+        opacity: 0.8;
+      }
     }
 
     .menu__brand {
@@ -222,8 +263,9 @@ header.mobile {
       transform: translate3d(100%, 0, 0);
 
       .logo {
-        width: 90px;
-        height: 90px;
+        height: 150px;
+        width: 150px;
+
       }
     }
   }
@@ -231,8 +273,11 @@ header.mobile {
   .logo {
     width: 200px;
     height: 200px;
-    background: lighten(black, 10);
     border-radius: 50%;
+    background-size: 80%;
+    background-color: #6c5ce7;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   .support {
@@ -240,7 +285,11 @@ header.mobile {
     bottom: 24px;
     color: rgba(black, 0.6);
   }
-  @include tablet {
-    display: block;
-  }
+}
+
+
+
+@keyframes move {
+  from { padding-left: 10rem; }
+  to   { padding-left: 0 }
 }

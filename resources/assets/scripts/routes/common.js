@@ -1,6 +1,15 @@
 export default {
   init() {
-    // JavaScript to be fired on all pages
+    // smooth page load
+    setTimeout(() => {
+      $('#loader-overlay svg').css('display', 'block');
+      $('#loader-overlay').removeClass('fade-out');
+    }, 100);
+    setTimeout(() => {
+      $('.main-container').css('display', 'block');
+    }, 1500);
+  },
+  finalize() {
     var Menu = (function() {
       var burger = document.querySelector('.burger');
       var menu = document.querySelector('.menu');
@@ -36,7 +45,6 @@ export default {
       };
 
       var bindActions = function() {
-        console.log('binded');
         burger.addEventListener('click', toggleMenu, false);
       };
 
@@ -48,11 +56,8 @@ export default {
         init: init,
       };
 
-    }());
+    } ());
 
     Menu.init();
-  },
-  finalize() {
-    // JavaScript to be fired on all pages, after page specific JS is fired
   },
 };

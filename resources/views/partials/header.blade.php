@@ -21,19 +21,28 @@
   <nav class="menu">
     <div class="menu__brand">
       <a href="">
-        <div class="logo" style="background: url(@asset('images/treme-logo.png')"></div>
+        <div class="logo" style="background-image: url(@asset('images/treme-logo.png')"></div>
       </a>
     </div>
     <ul class="menu__list">
-      <li class="menu__item"><a href="" class="menu__link">Work</a></li>
-      <li class="menu__item"><a href="" class="menu__link">About</a></li>
-      <li class="menu__item">
-        <a href="https://twitter.com/ettrics" target="_blank" class="menu__link menu__link--social"><i class="fa fa-twitter"></i></a>
-      </li>
-      <li class="menu__item">
-        <a href="https://dribbble.com/ettrics" target="_blank" class="menu__link menu__link--social">
-          <i class="fa fa-dribbble"></i></a>
-      </li>
+      @if (has_nav_menu('primary_navigation'))
+      {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
+      @endif
     </ul>
+    <div class="menu__social">
+      <ul>
+        <li class="menu__item">
+          <a href="https://www.facebook.com/hideawayentertainment1" target="_blank" class="menu__link menu__link--social"><i class="fa fa-facebook-f"></i></a>
+        </li>
+        <li class="menu__item">
+          <a href="https://www.instagram.com/tremehideaway/?hl=en" target="_blank" class="menu__link menu__link--social">
+            <i class="fa fa-instagram"></i></a>
+        </li>
+        <li class="menu__item">
+          <a href="https://www.yelp.com/biz/treme-hideaway-new-orleans" target="_blank" class="menu__link menu__link--social">
+            <i class="fa fa-yelp"></i></a>
+        </li>
+      </ul>
+    </div>
   </nav>
 </header>

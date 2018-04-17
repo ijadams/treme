@@ -2,7 +2,60 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  background: black;
 }
+
+#loader-overlay {
+  position: absolute;
+  width: 100vw;
+  height:100vh;
+  opacity: 0;
+  background: black;
+  transition: 2s opacity ease-in;
+  z-index: 1;
+  svg {
+    width: 400px;
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  &.fade-out {
+    opacity: 1;
+    z-index: 1000;
+  }
+}
+
+@keyframes draw {
+  0% { stroke: #2980b9; }
+  100% { stroke-dashoffset: 300; }
+}
+
+@keyframes letterflash {
+  0% { fill: #2980b9; }
+  100% { fill: #8e44ad; }
+}
+
+@keyframes spinnerflash {
+  0% { stroke: #2980b9; }
+  100% { stroke: #8e44ad; }
+}
+.circle {
+  stroke-dasharray: 150;
+  animation: draw 2s linear infinite;
+}
+
+.one, .two, .three, .four, .five, .six {
+  animation: letterflash 2s ease-in-out infinite;
+}
+
+.six   { animation-delay: 0.5s; }
+.five  { animation-delay: 0.4s; }
+.four  { animation-delay: 0.3s; }
+.three { animation-delay: 0.2s; }
+.two   { animation-delay: 0.1s; }
+.one   { animation-delay: 0s; }
+
 
 @mixin easeOut {
   transition: all .4s cubic-bezier(0.23, 1, 0.32, 1)
@@ -10,6 +63,13 @@ body {
 
 @mixin tablet {
   @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+
+@mixin mobile {
+  @media screen and (max-width: 480px) {
     @content;
   }
 }

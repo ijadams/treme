@@ -2,8 +2,8 @@ header.banner {
   position: absolute;
   z-index: 1;
   width: 100%;
-  height: 6rem;
-  padding: 4rem;
+  height: 10rem;
+  padding: 2rem;
   .container {
     display: flex;
     justify-content: space-between;
@@ -51,6 +51,7 @@ header.banner {
       text-align: center;
       margin: 0 0.4rem;
       padding: 0.7rem;
+      min-width: 7rem;
       &:hover {
         font-weight: 700;
         opacity: 1;

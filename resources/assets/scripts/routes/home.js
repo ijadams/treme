@@ -13,5 +13,10 @@ export default {
         $('button.orbit-next').css('opacity', '1');
       }
     });
+    $(function() {
+      setTimeout(() => {
+        $('.home-detail-wrapper').addClass('loaded');
+      }, 1650);
+    });
   },
 };

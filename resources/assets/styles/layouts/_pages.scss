@@ -1,0 +1,32 @@
+body.page-template-default {
+  background: white;
+  color: black;
+  main {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding-top: 13rem;
+    section.interior-main {
+      min-height: 50vh;
+      margin: 0 auto;
+      max-width: 50vw;
+      @media screen and (max-width: 1200px) {
+        max-width: 720px;
+      }
+      @include tablet {
+        max-width: inherit;
+        width: 100%;
+        padding: 0 2rem;
+      }
+      @include mobile {
+        padding: 0 1rem;
+      }
+      h1 {
+        font-weight: 700;
+        font-size: 1.8rem;
+        padding-bottom: 5rem
+      }
+    }
+  }
+}

@@ -1,7 +1,13 @@
 <header class="banner">
   <div class="container">
     <div class="brand-container">
-      <a class="brand" href="{{ home_url('/') }}" alt="{{ get_bloginfo('name', 'display') }}"><img src="@asset('images/treme-logo.png')"></a>
+      <a class="brand" href="{{ home_url('/') }}" alt="{{ get_bloginfo('name', 'display') }}">
+        @if (is_front_page())
+          <img src="@asset('images/treme-logo.png')">
+        @else
+        <img src="@asset('images/treme-logo-black.png')">
+        @endif
+      </a>
     </div>
     <nav class="nav-primary">
       @if (has_nav_menu('primary_navigation'))

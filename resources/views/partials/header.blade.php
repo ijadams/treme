@@ -31,15 +31,15 @@
     </ul>
     <div class="menu__social">
       <ul>
-        <li class="menu__item">
-          <a href="https://www.facebook.com/hideawayentertainment1" target="_blank" class="menu__link menu__link--social"><i class="fa fa-facebook-f"></i></a>
+        <li class="">
+          <a href="https://www.facebook.com/hideawayentertainment1" target="_blank" class="menu__link--social"><i class="fa fa-facebook-f"></i></a>
         </li>
-        <li class="menu__item">
-          <a href="https://www.instagram.com/tremehideaway/?hl=en" target="_blank" class="menu__link menu__link--social">
+        <li class="">
+          <a href="https://www.instagram.com/tremehideaway/?hl=en" target="_blank" class="menu__link--social">
             <i class="fa fa-instagram"></i></a>
         </li>
-        <li class="menu__item">
-          <a href="https://www.yelp.com/biz/treme-hideaway-new-orleans" target="_blank" class="menu__link menu__link--social">
+        <li class="">
+          <a href="https://www.yelp.com/biz/treme-hideaway-new-orleans" target="_blank" class="menu__link--social">
             <i class="fa fa-yelp"></i></a>
         </li>
       </ul>

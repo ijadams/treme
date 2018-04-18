@@ -21,7 +21,7 @@
   <nav class="menu">
     <div class="menu__brand">
       <a href="">
-        <div class="logo" style="background-image: url(@asset('images/treme-logo.png')"></div>
+        <div class="logo" style="background-image: url(@asset('images/treme-logo-black.png')"></div>
       </a>
     </div>
     <ul class="menu__list">

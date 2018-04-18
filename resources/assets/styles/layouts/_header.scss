@@ -128,7 +128,7 @@ header.mobile {
 
     &--active {
       visibility: visible;
-      .menu__social ul {
+      .menu__social ul li {
         transform: translate(0, 0) !important;
       }
       .menu__list ul li {
@@ -214,6 +214,9 @@ header.mobile {
       ul.menu__list li:nth-child(#{$x}) {
         transition-delay: $x * .03s;
       }
+      .menu__social ul li:nth-child(#{$x}) {
+        transition-delay: $x * .03s;
+      }
     }
     .menu__social {
       position: relative;
@@ -228,12 +231,13 @@ header.mobile {
         padding: 0;
         margin: 0 auto;
         height: inherit;
-        transform: translate(0, 100px);
         transition: 0.3s ease-in;
       }
       ul li {
         display: inline-block;
         margin: 0 0.4rem;
+        transform: translate(0, 100px);
+        transition: 0.3s ease-in;
         a {
           display: inline-block;
           position: relative;
@@ -308,7 +312,7 @@ header.mobile {
     height: 200px;
     border-radius: 50%;
     background-size: 80%;
-    background-color: #6c5ce7;
+    background-color: white;
     background-position: center;
     background-repeat: no-repeat;
   }

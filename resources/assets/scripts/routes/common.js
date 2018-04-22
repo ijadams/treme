@@ -17,6 +17,9 @@ export default {
       setTimeout(() => {
         $('.main-container').css('display', 'block');
       }, 500);
+      setTimeout(() => {
+        $('.interior-main').addClass('loaded');
+      }, 550);
     }
 
   },

@@ -12,6 +12,13 @@ body.page-template-default, body.calendar {
       min-height: 50vh;
       margin: 0 auto;
       max-width: 50vw;
+      transition: 0.3s ease-in;
+      transform: translateY(30%);
+      opacity: 0;
+      &.loaded {
+        transform: translateY(0);
+        opacity: 1;
+      }
       @media screen and (max-width: 1200px) {
         max-width: 720px;
       }
@@ -84,5 +91,8 @@ body.page-template-default, body.calendar {
       background: white;
       color: black;
     }
+  }
+  .single-event {
+    padding-bottom: 4rem;
   }
 }

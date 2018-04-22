@@ -37,9 +37,11 @@ query_posts($query_vars);
             </div>
           </div>
           <!-- image preview -->
-          <a href="<?php the_field('event_link'); ?>" class="event-image-link">
-            <div class="event-image" style="background-image: url('<?php the_field('image_preview'); ?>');"></div>
-          </a>
+          <?php if( get_field('image_preview') ): ?>
+            <a href="<?php the_field('event_link'); ?>" class="event-image-link">
+              <div class="event-image" style="background-image: url('<?php the_field('image_preview'); ?>');"></div>
+            </a>
+          <?php endif; ?>
           <!-- information -->
           <div class="event-info">
             <div class="title-date-container">

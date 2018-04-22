@@ -1,55 +1,76 @@
 export default {
   init() {
     // smooth page load
-    setTimeout(() => {
-      $('#loader-overlay svg').css('display', 'block');
-      $('#loader-overlay').removeClass('fade-out');
-    }, 100);
-    setTimeout(() => {
-      $('.main-container').css('display', 'block');
-    }, 1500);
+    if ($('body').hasClass('home')) {
+      setTimeout(() => {
+        $('#loader-overlay svg').css('display', 'block');
+        $('#loader-overlay').removeClass('fade-out');
+      }, 100);
+      setTimeout(() => {
+        $('.main-container').css('display', 'block');
+      }, 1500);
+    } else {
+      setTimeout(() => {
+        $('#loader-overlay svg').css('display', 'block');
+        $('#loader-overlay').removeClass('fade-out');
+      }, 100);
+      setTimeout(() => {
+        $('.main-container').css('display', 'block');
+      }, 500);
+    }
+
   },
   finalize() {
-    var Menu = (function() {
-      var burger = document.querySelector('.burger');
-      var menu = document.querySelector('.menu');
-      var menuList = document.querySelector('.menu__list');
-      var brand = document.querySelector('.menu__brand');
-      var menuItems = document.querySelectorAll('.menu__item');
+    const Menu = (function() {
+      let burger = document.querySelector('.burger');
+      let menu = document.querySelector('.menu');
+      let menuList = document.querySelector('.menu__list');
+      let brand = document.querySelector('.menu__brand');
+      let menuItems = document.querySelectorAll('.menu__item');
 
-      var active = false;
+      let active = false;
 
-      var toggleMenu = function() {
-        console.log('menu', menu);
-        if (!active) {
-          menu.classList.add('menu--active');
-          menuList.classList.add('menu__list--active');
-          brand.classList.add('menu__brand--active');
-          burger.classList.add('burger--close');
-          menuItems.forEach(item => {
-            item.classList.add('menu__item--active');
-          });
+      const toggleMenu = function() {
+          if (!active) {
+              menu.classList.add('menu--active');
+              menuList.classList.add('menu__list--active');
+              brand.classList.add('menu__brand--active');
+              burger.classList.add('burger--close');
+              menuItems.forEach(item => {
+                item.classList.add('menu__item--active');
+              });
 
-          active = true;
-        } else {
-          menu.classList.remove('menu--active');
-          menuList.classList.remove('menu__list--active');
-          brand.classList.remove('menu__brand--active');
-          burger.classList.remove('burger--close');
-          menuItems.forEach(item => {
-            item.classList.remove('menu__item--active');
-          });
+              active = true;
+          } else {
+              menu.classList.remove('menu--active');
+              menuList.classList.remove('menu__list--active');
+              brand.classList.remove('menu__brand--active');
+              burger.classList.remove('burger--close');
+              menuItems.forEach(item => {
+                item.classList.remove('menu__item--active');
+              });
 
-          active = false;
-        }
+              active = false;
+          }
       };
 
-      var bindActions = function() {
-        burger.addEventListener('click', toggleMenu, false);
+      const bindActions = function() {
+          burger.addEventListener('click', toggleMenu, false);
       };
 
-      var init = function() {
+      const activeClass = () => {
+          const pages = ['About', 'Calendar', 'Contact'];
+          pages.forEach((page, i) => {
+              if ($('body').hasClass(page.toLowerCase())) {
+                let nav = $('.nav-primary ul li');
+                nav.eq(i).addClass('active');
+              }
+          });
+      };
+
+      const init = function() {
         bindActions();
+        activeClass();
       };
 
       return {

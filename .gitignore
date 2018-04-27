@@ -8,3 +8,7 @@ yarn-error.log
 vendor
 resources/assets/config-local.json
 .idea/
+.DS_Store
+._*
+
+

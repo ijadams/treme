@@ -64,7 +64,6 @@ body.home {
       }
       .hours {
         color: rgba(255,255,255,255.6);
-        font-size: 0.8rem;
       }
     }
     &.loaded {
@@ -87,6 +86,7 @@ body.home {
     .hours {
       color: rgba(0,0,0,0.6);
       font-size: 0.8rem;
+      letter-spacing: 0;
     }
     @include mobile {
       left: 0;

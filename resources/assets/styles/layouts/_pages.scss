@@ -8,6 +8,9 @@ body.page-template-default, body.calendar {
     width: 100%;
     padding-top: 12rem;
     padding-bottom: 2rem;
+    .page-header h1 {
+      display: none;
+    }
     section.interior-main {
       min-height: 50vh;
       margin: 0 auto;
@@ -94,5 +97,10 @@ body.page-template-default, body.calendar {
   }
   .single-event {
     padding-bottom: 4rem;
+  }
+  &.weekly {
+    .event-date {
+      margin-bottom: 0.4rem;
+    }
   }
 }

@@ -9,6 +9,7 @@
 <section class="interior-main">
   @include('partials.page-header')
   @include('partials.events-page')
+  @include('partials.events-weekly')
 </section>
 @endwhile
 @endsection

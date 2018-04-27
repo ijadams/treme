@@ -1,7 +1,5 @@
 <?php
-/* EVENTS LOOP*/
-
-
+/* FEATURED EVENTS LOOP*/
 $query_vars = array(
   'post_type' => 'events',
   'posts_per_page'	=> -1,
@@ -10,14 +8,11 @@ $query_vars = array(
   'order'				=> 'ASC'
 );
 
-
 query_posts($query_vars);
-
 ?>
-
-
+<h1>Upcoming Events</h1>
 <div class="row">
-  <div class="columns large-6">
+  <div class="columns large-12">
     <section class="events-holder">
       <?php
       if (have_posts()) : while (have_posts()) : the_post();

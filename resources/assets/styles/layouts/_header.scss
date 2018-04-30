@@ -310,8 +310,14 @@ header.mobile {
       .logo {
         height: 150px;
         width: 150px;
-
       }
+    }
+  }
+
+  @include mobile {
+    .logo {
+      height: 80px;
+      width: 80px;
     }
   }
 
@@ -323,10 +329,6 @@ header.mobile {
     background-color: white;
     background-position: center;
     background-repeat: no-repeat;
-    @include mobile {
-      width: 75px;
-      height: 75px;
-    }
   }
 
   .support {

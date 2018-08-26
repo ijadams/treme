@@ -2,25 +2,57 @@ export default {
   init() {
     // smooth page load
     if ($('body').hasClass('home')) {
+
       setTimeout(() => {
-        $('#loader-overlay svg').css('display', 'block');
-        $('#loader-overlay').removeClass('fade-out');
-      }, 100);
+        $('#loader-overlay-gates #treme-logo').css('transform', 'translateX(100%)');
+        $('#loader-overlay-gates #right-gate').css('right', '-100%');
+        $('#loader-overlay-gates #left-gate').css('left', '-100%');
+      }, 1000);
+
       setTimeout(() => {
         $('.main-container').css('display', 'block');
-      }, 1500);
+      }, 1100);
+
+      setTimeout(() => {
+        $('#loader-overlay-gates').css('display', 'none');
+      }, 1800);
+
     } else {
+
       setTimeout(() => {
-        $('#loader-overlay svg').css('display', 'block');
-        $('#loader-overlay').removeClass('fade-out');
-      }, 100);
-      setTimeout(() => {
-        $('.main-container').css('display', 'block');
+        $('#loader-overlay-gates #treme-logo').css('transform', 'translateX(100%)');
+        $('#loader-overlay-gates #right-gate').css('right', '-100%');
+        $('#loader-overlay-gates #left-gate').css('left', '-100%');
       }, 500);
       setTimeout(() => {
+        $('.main-container').css('display', 'block');
+        $('#loader-overlay-gates').css('display', 'none');
+      }, 1100);
+      setTimeout(() => {
         $('.interior-main').addClass('loaded');
-      }, 550);
+      }, 1500);
     }
+
+      // old loader
+    //   setTimeout(() => {
+    //     $('#loader-overlay svg').css('display', 'block');
+    //     $('#loader-overlay').removeClass('fade-out');
+    //   }, 100);
+    //   setTimeout(() => {
+    //     $('.main-container').css('display', 'block');
+    //   }, 1500);
+    // } else {
+    //   setTimeout(() => {
+    //     $('#loader-overlay svg').css('display', 'block');
+    //     $('#loader-overlay').removeClass('fade-out');
+    //   }, 100);
+    //   setTimeout(() => {
+    //     $('.main-container').css('display', 'block');
+    //   }, 500);
+    //   setTimeout(() => {
+    //     $('.interior-main').addClass('loaded');
+    //   }, 550);
+    // }
 
   },
   finalize() {

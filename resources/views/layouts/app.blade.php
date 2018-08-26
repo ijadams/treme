@@ -2,7 +2,7 @@
 <html @php(language_attributes())>
   @include('partials.head')
   <body @php(body_class())>
-  @include('partials.loader')
+  @include('partials.loader-peter')
   <div class="main-container" style="display: none;">
     @php(do_action('get_header'))
     @include('partials.header')

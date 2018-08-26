@@ -1,5 +1,5 @@
 <div class="fullscreen-image-slider">
-  <div class="orbit" role="region" aria-label="FullScreen Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;animation_speed:8000;">
+  <div class="orbit" role="region" aria-label="FullScreen Pictures" data-orbit data-options="animation_speed:10000;animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
     <ul class="orbit-container">
       <button class="orbit-previous">
         <span class="show-for-sr">Previous Slide</span>

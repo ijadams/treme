@@ -4,9 +4,9 @@ export default {
     if ($('body').hasClass('home')) {
 
       setTimeout(() => {
-        $('#loader-overlay-gates #treme-logo').css('transform', 'translateX(100%)');
-        $('#loader-overlay-gates #right-gate').css('right', '-100%');
-        $('#loader-overlay-gates #left-gate').css('left', '-100%');
+        $('#loader-overlay-gates #treme-logo').css('transform', 'translateX(80%)');
+        $('#loader-overlay-gates #right-gate').css('right', '-80%');
+        $('#loader-overlay-gates #left-gate').css('left', '-80%');
       }, 1000);
 
       setTimeout(() => {

@@ -3,19 +3,37 @@ export default {
     // smooth page load
     if ($('body').hasClass('home')) {
 
-      setTimeout(() => {
-        $('#loader-overlay-gates #treme-logo').css('transform', 'translateX(80%)');
-        $('#loader-overlay-gates #right-gate').css('right', '-80%');
-        $('#loader-overlay-gates #left-gate').css('left', '-80%');
-      }, 1000);
+      if ($(window).width() < 768) {
+        setTimeout(() => {
+          $('#loader-overlay-gates #treme-logo').css('transform', 'translateX(100%)');
+          $('#loader-overlay-gates #right-gate').css('right', '-100%');
+          $('#loader-overlay-gates #left-gate').css('left', '-100%');
+        }, 1000);
 
-      setTimeout(() => {
-        $('.main-container').css('display', 'block');
-      }, 1100);
+        setTimeout(() => {
+          $('.main-container').css('display', 'block');
+        }, 1100);
 
-      setTimeout(() => {
-        $('#loader-overlay-gates').css('display', 'none');
-      }, 1800);
+        setTimeout(() => {
+          $('#loader-overlay-gates').css('z-index', '1');
+        }, 1500);
+      }
+      else {
+        setTimeout(() => {
+          $('#loader-overlay-gates #treme-logo').css('transform', 'translateX(35%)');
+          $('#loader-overlay-gates #right-gate').css('right', '-35%');
+          $('#loader-overlay-gates #left-gate').css('left', '-35%');
+        }, 1000);
+
+        setTimeout(() => {
+          $('.main-container').css('display', 'block');
+        }, 1100);
+
+        setTimeout(() => {
+          $('#loader-overlay-gates').css('z-index', '1');
+        }, 1500);
+      }
+
 
     } else {
 

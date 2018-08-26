@@ -2,6 +2,22 @@ body.home {
   overflow: hidden;
   height: 100%;
   width: 100%;
+  header.banner .container {
+    justify-content: center;
+    .nav-primary ul li a {
+      font-size: 1.618em;
+      padding: 0.7rem 1rem;
+    }
+    @include tablet {
+      justify-content: space-between;
+    }
+  }
+  .brand-container {
+    display: none;
+    @include tablet {
+      display: block;
+    }
+  }
   button.orbit-next, button.orbit-previous {
     z-index: 1;
     transition: 0.2s ease-in-out;

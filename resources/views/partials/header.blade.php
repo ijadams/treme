@@ -26,7 +26,7 @@
 
   <nav class="menu">
     <div class="menu__brand">
-      <a href="/">
+      <a href="{{ home_url('/') }}">
         <div class="logo" style="background-image: url(@asset('images/treme-logo-black.png')"></div>
       </a>
     </div>

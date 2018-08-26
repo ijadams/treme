@@ -30,7 +30,7 @@ export default {
       }, 1100);
       setTimeout(() => {
         $('.interior-main').addClass('loaded');
-      }, 1500);
+      }, 1300);
     }
 
       // old loader

@@ -15,8 +15,8 @@ body.page-template-default, body.calendar {
       min-height: 50vh;
       margin: 0 auto;
       max-width: 50vw;
-      transition: 0.3s ease-in;
-      transform: translateY(30%);
+      transition: 0.5s ease-in;
+      transform: translateY(300px);
       opacity: 0;
       &.loaded {
         transform: translateY(0);
